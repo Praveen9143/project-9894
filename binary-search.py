@@ -1,5 +1,6 @@
 import random, math
 
+# Your Version
 def binary_search(list, item):
     low = 0
     high = len(list) - 1
@@ -17,14 +18,14 @@ def binary_search(list, item):
     return None
 
 
-my_list = list(range(-100000, 7821803))
+my_list = list(range(1, 1000000))
 
-#print(binary_search(my_list, 6))
+print(binary_search(my_list, 6))
 #print(binary_search(my_list, -1))
 
-# Recursive Version
-# Getting a low and a high, with a goal number
-def binary_search_two2(arr, goal_num=None, tries=0):
+# Recursive Version / My Version
+
+def binary_search_two2(arr, goal_num=6, tries=0):
     low = 0
     high = len(arr) - 1
     mid = math.ceil((len(arr) / 2) - 1)
@@ -47,4 +48,4 @@ def binary_search_two2(arr, goal_num=None, tries=0):
     binary_search_two2(arr, goal_num, tries)
 
 
-binary_search_two2(list(range(1, 3999999999)))
+#binary_search_two2(list(range(1, 1000000)))
